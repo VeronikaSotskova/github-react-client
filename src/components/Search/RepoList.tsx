@@ -8,7 +8,7 @@ import { RepositorySearchNode } from '../qraphql/SEARCH_REPO/types';
 
 export const useStyles = makeStyles({
     card: {
-        width: 410,
+        width: 610,
         height: 170,
         margin: 15,
         float: 'left',
@@ -55,7 +55,7 @@ export const RepoList: FC<Props> = ({data}) => {
                             Updated: {node.updatedAt}
                         </Typography>
                         <Typography>
-                            Url: <Link to={node.url}>{node.url}</Link>
+                            Url: <a href={node.url} target="_blank" rel="noreferrer">{node.url}</a>
                         </Typography>
                         <Button>
                             {node.viewerHasStarred ? (<UnStar node={node}/>) : (<Star node={node}/>)}

@@ -8,7 +8,6 @@ import Loading from '../Loading/Loading';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import CallSplitIcon from '@material-ui/icons/CallSplit';
-import { Link } from 'react-router-dom';
 
 const emptyData: RepositoryNode = {
     createdAt: '',
@@ -59,7 +58,7 @@ export const Repository: FC = () => {
                         Owner: {repoData?.owner?.login}
                     </Typography>
                     <Typography>
-                        Url: <Link to={repoData.url}>{repoData.url}</Link>
+                        Url: <a href={repoData.url} target="_blank" rel="noreferrer">{repoData.url}</a>
                     </Typography>
                     <Typography component="p" style={{marginBottom: 20}}>
                         Description: {repoData?.description}

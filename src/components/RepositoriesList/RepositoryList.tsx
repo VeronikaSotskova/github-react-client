@@ -10,7 +10,7 @@ import { Star } from './Star';
 export const useStyles = makeStyles({
     card: {
         width: 410,
-        height: 163,
+        height: 200,
         margin: 15,
         float: 'left',
         borderRadius: '4px',
@@ -61,7 +61,7 @@ export const RepositoryList: FC<Props> = ({data}) => {
                                     Updated: {node.updatedAt}
                                 </Typography>
                                 <Typography>
-                                    Url: <Link to={node.url}>{node.url}</Link>
+                                    Url: <a href={node.url} target="_blank" rel="noreferrer">{node.url}</a>
                                 </Typography>
                                 <Button>
                                     {node.viewerHasStarred ? (<UnStar node={node}/>) : (<Star node={node}/>)}
